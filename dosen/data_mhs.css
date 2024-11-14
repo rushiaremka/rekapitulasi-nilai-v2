@@ -1,0 +1,80 @@
+table{
+    width: 100%;
+    height: 100%;
+    background: #35A29F;
+    border-radius: 10px 10px 0 0 ;
+    padding: 20px 0 0 0;
+}
+thead{
+    background: #35A29F;
+    border-radius: 10px 10px 0 0;
+}
+
+tbody{
+    background: #0B666A;
+    color: #eeeeee;
+}
+
+td, th{
+    padding: 5px;
+    text-align: center;
+}
+
+td button{
+    color: #eeeeee;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 2px;
+    border-radius: 3px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.edit{
+    background: #97FEED;
+    margin: 0 0 1px 0;
+}
+.hapus{
+    background: #35A29F;
+    margin: 1px 0 0 0;
+}
+.content{
+    position: relative;
+}
+.modal{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 400px;
+    height: 400px;
+    background: #35A29F;
+    border: 3px solid #0B666A;
+    border-radius: 20px;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.modal input{
+    padding: 10px;
+    background: #071952;
+    border-radius: 7px;
+    color: #eeeeee;
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+.modal input::placeholder{
+    color: #eeeeee;
+}
+
+.modal button{
+    cursor: pointer;
+    padding: 10px;
+    background: #97FEED;
+    border-radius: 7px;
+    color: #eeeeee;
+    margin: 10px 0 0 0;
+}

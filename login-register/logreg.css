@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* palette warna      https://colorhunt.co/palette/97FEED686d76373a40dc5f00     */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+body{
+    background: #071952;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    background: url(../assets/bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+
+
+h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-shadow: 0 0 2px #35A29F, 0 0 4px #35A29F ,0 0 8px #35A29F;
+}
+.formlogin, .formregister{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    padding: 20px;
+    transition: 0.5s
+}
+.formlogin{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.formregister{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* display: none; */
+}
+
+
+.formlogininner, .formregisterinner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: 0.5s;
+}
+
+
+input{
+    padding: 10px;
+    background: #373A4060;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    border: none;
+    transition: 0.5s;
+    color: #97FEED;
+}
+input::placeholder{
+    color: #97FEED70;
+}
+.username, .email, .password, .any{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.5s;
+} 
+.any .btnlogsub{
+    padding: 10px;
+    background: #97FEED;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.any .btnregsub{
+    padding: 10px;
+    background: #686D7620;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 2px solid #97FEED;
+    width: 100%;
+    color: #97FEED;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.any{
+    gap: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.5s;
+    /* text-shadow: 0 0 2px #97FEED, 0 0 4px #97FEED ,0 0 8px #97FEED; */
+    backdrop-filter: blur(10px);
+    background: #0B666A80;
+    padding: 5px 0 5px 5px;
+    margin: 0 0 -5px 0;
+    border-radius: 5px;
+}
+.any a{
+    text-decoration: none;
+    transition: 0.5s;
+    text-shadow: 0 0 2px #0000ee, 0 0 4px #97FEED ,0 0 8px #97FEED;
+}
+
+
+
+
+
+
+.btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.btlog, .btreg{
+    width: 400px;
+    height: 500px;
+    background: #071952;
+    z-index: 9;
+}
+.btlog{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    animation: 0.5s ease btlog;
+}
+.btreg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: 0.5s ease btreg;
+}
+@keyframes btlog{
+    from{
+        transform: translateX(400px);
+    } to{
+        transform: translateX(0);
+    }
+}
+@keyframes btreg{
+    from{
+        transform: translateX(-400px);
+    } to{
+        transform: translateX(0);
+    }
+}
+
+.btlog button, .btreg button{
+    padding: 10px;
+    width: 40%;
+    height: 100%;
+    border-radius: 7px;
+    border: none;
+    background: #0B666A;
+
+    /* box-shadow: 0 0 8px #0B666A, 
+    0 0 16px #0B666A, */
+    /* 0 0 32px #97FEED,
+    0 0 64px #97FEED; */
+    cursor: pointer;
+
+    /* letter-spacing: 5px; */
+    position: relative;
+    overflow: hidden;
+}
+
+button p{
+    color: #97FEED;
+    text-shadow: 0 0 1px #97FEED, 0 0 2px #97FEED, 0 0 3px #97FEED, 0 0 4px #97FEED, 0 0 8px #97FEED;
+    animation: glitch 1s ease;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "ROND" 0;
+    font-size: 3rem;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes glitch{
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    10%{
+        opacity: 0;
+    }
+    13%{
+        opacity: 0.5;
+    }
+    25%{
+        opacity: 2;
+    }
+    34%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    36%{
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 1;
+    }
+    65%{
+        opacity: 1;
+    }
+    67%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+
+
+ /*------------------------ Keyframe Javascript */
+
+@keyframes logbtn{
+    from{
+        transform: translateX(0);
+    } to{
+        transform: translateX(240px);
+    }
+}
+
+@keyframes regbtn{
+    from{
+        transform: translateX(240px);
+    } to{
+        transform: translateX(0);
+    }
+}
+
+.logbtnkeyframe{
+    animation: 0.5s ease logbtn;
+}
+.regbtnkeyframe{
+    animation: 0.5s ease regbtn;
+}
+
+/*------- tab */
+
+@keyframes tab1{
+    from{
+        transform: translateY(200px);
+        display: none;
+    } to{
+        transform: translateY(0);
+        display: block;
+    }
+}
+
+.tabtransform1{
+    animation: tab1 0.5s ease;
+}
+
+@keyframes tab2{
+    from{
+        transform: translateY(0);
+        display: block;
+    } to{
+        transform: translateY(200px);
+        display: none;
+    }
+}
+
+.tabtransform2{
+    animation: tab2 0.5s ease;
+}
